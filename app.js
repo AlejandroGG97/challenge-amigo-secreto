@@ -5,10 +5,10 @@ let nombresAmigos = [];
 function agregarAmigo() {
 let nombre = document.getElementById('nombre').value;
     if (nombre == "") {
-        swal('Ingresa el nombre de un amigo');
+        alert('Ingresa el nombre de un amigo');
     } else {
         if (nombresAmigos.includes(nombre)) {
-            swal('Este amigo ya esta registrado!, ingresa uno diferente');
+            alert('Este amigo ya esta registrado!, ingresa uno diferente');
         } else {
             nombresAmigos.push(nombre);
             console.log(nombresAmigos);
@@ -27,4 +27,13 @@ function llenarLista(texto) {
     (document.getElementById('listaAmigos')).appendChild(nuevoAmigo);
 
     return;
+}
+
+function sortearAmigo() {
+    
+    let numeroGenerado = Math.floor(Math.random()*nombresAmigos)+1;
+    console.log(numeroGenerado);
+    let sorteado = document.getElementById('resultado');
+    sorteado.innerHTML = nombresAmigos[numeroGenerado];
+
 }
