@@ -11,7 +11,6 @@ let nombre = document.getElementById('nombre').value;
             alert('Este amigo ya esta registrado!, ingresa uno diferente');
         } else {
             nombresAmigos.push(nombre);
-            console.log(nombresAmigos);
             llenarLista(`${nombre}`);
         }
     }
@@ -32,7 +31,6 @@ function llenarLista(texto) {
 function sortearAmigo() {
     
     let numeroGenerado = Math.floor(Math.random()*nombresAmigos.length);
-    console.log(numeroGenerado);
     let sorteado = document.getElementById('resultado');
     sorteado.innerHTML = nombresAmigos[numeroGenerado];
 
