@@ -31,7 +31,7 @@ function llenarLista(texto) {
 
 function sortearAmigo() {
     
-    let numeroGenerado = Math.floor(Math.random()*nombresAmigos)+1;
+    let numeroGenerado = Math.floor(Math.random()*nombresAmigos.length);
     console.log(numeroGenerado);
     let sorteado = document.getElementById('resultado');
     sorteado.innerHTML = nombresAmigos[numeroGenerado];
