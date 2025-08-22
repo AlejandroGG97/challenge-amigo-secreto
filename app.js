@@ -6,7 +6,7 @@ function agregarAmigo() {
 document.getElementById('sorteo').removeAttribute('disabled');
 let nombre = document.getElementById('nombre').value;
         
-        if (nombre == "number") {
+        if (nombre == "") {
             alert('Ingresa el nombre de un amigo');
         } else {
             if (nombresAmigos.includes(nombre)) {
